@@ -2,6 +2,11 @@
   "name": "index-mixer",
   "version": "0.1.1",
   "main": "index-mixer.js",
+  "author": "rouanw",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rouanw/index-mixer"
+  },
   "license": "MIT",
   "scripts": {
     "test": "node test.js"
