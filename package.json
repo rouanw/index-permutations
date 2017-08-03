@@ -7,6 +7,10 @@
     "test": "node test.js"
   },
   "devDependencies": {
+    "lodash": "^4.17.4",
     "tape": "^4.8.0"
+  },
+  "dependencies": {
+    "js-combinatorics": "^0.5.2"
   }
 }

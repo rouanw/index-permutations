@@ -117,6 +117,14 @@ is-symbol@^1.0.1:
   version "1.0.1"
   resolved "http://npm.tescloud.com/is-symbol/-/is-symbol-1.0.1.tgz#3cc59f00025194b6ab2e38dbae6689256b660572"
 
+js-combinatorics@^0.5.2:
+  version "0.5.2"
+  resolved "http://npm.tescloud.com/js-combinatorics/-/js-combinatorics-0.5.2.tgz#f060749232ea1b770076ff97aed6cfa9ab41b8f4"
+
+lodash@^4.17.4:
+  version "4.17.4"
+  resolved "http://npm.tescloud.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+
 minimatch@^3.0.4:
   version "3.0.4"
   resolved "http://npm.tescloud.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
