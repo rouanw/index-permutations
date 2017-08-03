@@ -3,7 +3,7 @@ const _ = require('lodash');
 const indexPermutations = require('./index-permutations');
 
 test('index permutations', function (t) {
-  t.plan(3);
+  t.plan(4);
 
   t.deepEqual(indexPermutations({ 'name.first': 'Richard' }), [
     { 'name.first': 1 },
@@ -35,6 +35,7 @@ test('index permutations', function (t) {
   ];
   const actual = indexPermutations({ 'name.first': 'Richard', 'vegan': true, happy: false });
   t.ok(_(actual).differenceWith(expected, _.isEqual).isEmpty());
+  t.equal(actual.length, expected.length);
 
   t.end();
 });
