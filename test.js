@@ -1,15 +1,15 @@
 const test = require('tape');
 const _ = require('lodash');
-const indexPermutations = require('./index-permutations');
+const indexMixer = require('./index-mixer');
 
-test('index permutations', function (t) {
+test('index mixer', function (t) {
   t.plan(4);
 
-  t.deepEqual(indexPermutations({ 'name.first': 'Richard' }), [
+  t.deepEqual(indexMixer({ 'name.first': 'Richard' }), [
     { 'name.first': 1 },
   ]);
 
-  t.deepEqual(indexPermutations({ 'name.first': 'Richard', 'vegan': true }), [
+  t.deepEqual(indexMixer({ 'name.first': 'Richard', 'vegan': true }), [
     { 'name.first': 1 },
     { vegan: 1 },
     { 'name.first': 1, vegan: 1 },
@@ -33,7 +33,7 @@ test('index permutations', function (t) {
     { vegan: 1, 'name.first': 1, happy: 1},
     { vegan: 1, happy: 1, 'name.first': 1},
   ];
-  const actual = indexPermutations({ 'name.first': 'Richard', 'vegan': true, happy: false });
+  const actual = indexMixer({ 'name.first': 'Richard', 'vegan': true, happy: false });
   t.ok(_(actual).differenceWith(expected, _.isEqual).isEmpty());
   t.equal(actual.length, expected.length);
 

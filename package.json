@@ -1,7 +1,7 @@
 {
-  "name": "index-permutations",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "index-mixer",
+  "version": "0.1.0",
+  "main": "index-mixer.js",
   "license": "MIT",
   "scripts": {
     "test": "node test.js"
