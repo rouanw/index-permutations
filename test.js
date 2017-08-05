@@ -3,7 +3,7 @@ const _ = require('lodash');
 const indexMixer = require('./index-mixer');
 
 test('index mixer', function (t) {
-  t.plan(4);
+  t.plan(5);
 
   t.deepEqual(indexMixer({ 'name.first': 'Richard' }), [
     { 'name.first': 1 },
@@ -36,6 +36,13 @@ test('index mixer', function (t) {
   const actual = indexMixer({ 'name.first': 'Richard', 'vegan': true, happy: false });
   t.ok(_(actual).differenceWith(expected, _.isEqual).isEmpty());
   t.equal(actual.length, expected.length);
+
+  t.deepEqual(indexMixer({ $or: [{ happy: true }, { vegan: false }] }), [
+    { happy: 1 },
+    { vegan: 1 },
+    { happy: 1, vegan: 1 },
+    { vegan: 1, happy: 1 },
+  ]);
 
   t.end();
 });
