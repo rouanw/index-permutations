@@ -16,6 +16,6 @@
     "tape": "^4.8.0"
   },
   "dependencies": {
-    "js-combinatorics": "^0.5.2"
+    "js-combinatorics": "^0.6.1"
   }
 }
